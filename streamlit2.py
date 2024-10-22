@@ -52,7 +52,7 @@ st.markdown("Kullandığımız model ve vektorizasyon karşılaştırmalarına g
 
 st.image("./veri-last.png")
 
-from joblib import dump, load
+#from joblib import dump, load
 
 cv = load('cv.pkl')
 model = load('model.pkl')
