@@ -51,3 +51,32 @@ with col9:
 st.markdown("Kullandığımız model ve vektorizasyon karşılaştırmalarına göre en iyi sonucu logistik regresyon N-gram yöntemi ile elde ettik.")
 
 st.image("./veri-last.png")
+
+from joblib import dump, load
+
+cv = load('./cv.pkl')
+model = load('./model.pkl')
+
+lower_n = lambda x: str(x.lower()).replace('\n',' ')
+
+text_input = st.text_area("Please enter english words or sentences")
+
+text_input = lower_n(text_input)
+
+
+if st.button("Predict"):
+    vektor = cv.transform([text_input])
+    prediction = model.predict(vektor)[0]
+    if prediction == 1:
+        st.markdown("## YOUR ARE TOXIC")
+        #st.success("Predicted Output : Your are TOXIC")
+    else:
+        st.markdown("## YOUR ARE GOOD PERSON")
+        #st.success("Predicted Output : Your are GOOD PERSON")
+
+
+
+
+
+
+
