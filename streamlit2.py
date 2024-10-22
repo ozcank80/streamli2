@@ -7,7 +7,7 @@ import streamlit as st
 
 st.title("Toksik insan mısın, değil misin??")
 
-st.image("./identify-toxic-people.jpg",width=250)
+st.image("./identify-toxic-people.jpg")
 
 st.header("Nereden nereye")
 st.markdown("Bu tarz yazilari kucultebiliyoruz..")
