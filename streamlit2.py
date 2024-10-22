@@ -54,8 +54,8 @@ st.image("./veri-last.png")
 
 #from joblib import dump, load
 
-cv = load('cv.pkl')
-model = load('model.pkl')
+cv = load('./cv.pkl')
+model = load('./model.pkl')
 
 lower_n = lambda x: str(x.lower()).replace('\n',' ')
 
