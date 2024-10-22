@@ -9,17 +9,17 @@ st.title("Toksik insan mısın, değil misin??")
 
 st.image("./identify-toxic-people.jpg",width=300)
 
-st.markdown("Yaptığımız çalışmada kaggle dan yararlandık. Toksik veri setiyle çalıştık.")
+st.markdown("##Yaptığımız çalışmada kaggle dan yararlandık. Toksik veri setiyle çalıştık.")
 
 st.image("./veri-1.png")
-st.markdown("Veri setimizde aşağıdaki şekilde sadeleştirme yaptık.")
+st.markdown("Veri setimizde aşağıdaki şekilde sadeleştirmeler yaptık.")
 st.image("./veri-2.png")
 st.image("./veri-3.png")
 st.image("./veri-4.png")
-st.markdown("sadeleştirme sonrasında lntk kütüphanesinden yararlanarak modelleme çalışması öncesi verimizin son halini verdik.")
+st.markdown("Sadeleştirme sonrasında lntk kütüphanesinden yararlanarak modelleme çalışması öncesi verimize son halini verdik.")
 st.image("./bir.png")
 st.image("./iki.png")
-st.markdown("vektorizasyon ve modelleri kullarak çalışma yaptık. Aşağıda kullandığımız modellerin confision matriklerini görebilirsiniz.")
+st.markdown("Vektorizasyon ve modelleri kullandık. Aşağıda kullandığımız modellerin confision matriklerini görebilirsiniz.")
 
 col1, col2 , col3 = st.columns(3)
 
@@ -35,7 +35,7 @@ col4, col5 , col6 = st.columns(3)
 with col4:
     st.image("./cm5.png", caption = 'BS(Ber-NB & Word)-CV')
 with col5:
-    st.image("./m6.png", caption = 'BS(Ber-NB & N-Gr)-CV')
+    st.image("./cm6.png", caption = 'BS(Ber-NB & N-Gr)-CV')
 with col6:
     st.image("./cm7.png", caption = 'LR(Word)-TF')
 
@@ -48,3 +48,6 @@ with col8:
 with col9:
     st.image("./cm10.png", caption = 'BS(Mul-NB & N-Gr)-TF')
 
+st.markdown("Kullandığımız model ve vektorizasyon karşılaştırmalarına göre en iyi sonucu logistik regresyon N-gram yöntemi ile elde ettik.")
+
+st.image("./veri-last.png")
